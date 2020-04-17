@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_selected="true"
+        android:state_enabled="true"
+        android:state_checked="true"
+        android:state_checkable="true"
+        android:drawable="@drawable/thumbsup" />
+    <item
+        android:state_focused="true"
+        android:state_enabled="true"
+        android:state_checked="false"
+        android:alpha="0.4"
+        android:drawable="@drawable/family" />
+    <item
+        android:state_enabled="true"
+        android:state_checked="false"
+        android:drawable="@drawable/family" />
+
+</selector>

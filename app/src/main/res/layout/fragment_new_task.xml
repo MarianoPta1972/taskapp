@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.NewTaskFragment">
+
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:id="@+id/titleTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/clipboard"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="32dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="My New Task"
+            android:textSize="36sp"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+
+        android:background="?android:attr/listDivider" />
+
+    <EditText
+        android:id="@+id/taskTitle"
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content"
+        android:hint="Task Title"
+        android:gravity="center"
+        android:background="@drawable/rounded_edittext_states"
+        android:padding="5dip"/>
+    <EditText
+        android:id="@+id/taskDesc"
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content"
+        android:hint="Task Description"
+        android:gravity="center"
+        android:background="@drawable/rounded_edittext_states"
+        android:padding="5dip"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Task Status"
+        android:gravity="center"
+        android:textSize="32dp"
+        android:background="@color/title"
+        android:layout_marginTop="16dp"/>
+    <RadioGroup
+        android:id="@+id/status_group"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/todo_status"
+            android:text="To Do"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/in_progress_status"
+            android:text="In Progress"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/completed_status"
+            android:text="Completed"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+    </RadioGroup>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Task Type"
+        android:gravity="center"
+        android:textSize="32dp"
+        android:background="@color/title"
+        android:layout_marginTop="16dp"/>
+
+    <RadioGroup
+        android:id="@+id/type_group"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="48dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/familyType"
+            android:checked="false"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:clickable="true"
+            android:text="family"
+            android:layout_weight="1"
+            android:focusable="true" />
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/workType"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:text="Work"
+            android:layout_weight="1"
+            />
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/personalType"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:text="Personal"
+            android:src="@drawable/personal"/>
+    </RadioGroup>
+
+        <Button
+            android:id="@+id/enterNewTaskBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="48sp"
+            android:layout_marginBottom="48sp"
+            android:text="Insert New Task Activity"
+            android:textSize="24sp"
+            android:layout_gravity="center"/>
+
+
+    </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
