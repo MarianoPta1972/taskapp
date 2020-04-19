@@ -90,53 +90,54 @@
         android:id="@+id/container"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        app:layout_constraintBottom_toTopOf="@id/bottomType"
+        app:layout_constraintBottom_toTopOf="parent"
         app:layout_constraintStart_toEndOf="@id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:id="@+id/bottomType"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+    <!--
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          android:id="@+id/bottomType"
+          android:orientation="horizontal"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStf="parent">
 
-        <RadioGroup
-            android:id="@+id/type_group"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginBottom="16dp"
-            android:orientation="horizontal">
+          <RadioGroup
+              android:id="@+id/type_group"
+              android:layout_width="match_parent"
+              android:layout_height="70dp"
+              android:layout_marginBottom="16dp"
+              android:orientation="horizontal">
 
-            <androidx.appcompat.widget.AppCompatImageButton
-                android:id="@+id/familyType"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:layout_marginStart="16dp"
-                android:layout_weight="1"
-                android:src="@drawable/family"/>
-            <androidx.appcompat.widget.AppCompatImageButton
-                android:id="@+id/workType"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:layout_marginStart="16dp"
-                android:layout_weight="1"
-                android:src="@drawable/work" />
-            <androidx.appcompat.widget.AppCompatImageButton
-                android:id="@+id/personalType"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:layout_marginStart="16dp"
-                android:layout_weight="1"
-                android:src="@drawable/personal"/>
-        </RadioGroup>
+              <androidx.appcompat.widget.AppCompatImageButton
+                  android:id="@+id/familyType"
+                  android:layout_width="wrap_content"
+                  android:layout_height="48dp"
+                  android:layout_marginStart="16dp"
+                  android:layout_weight="1"
+                  android:src="@drawable/family"/>
+              <androidx.appcompat.widget.AppCompatImageButton
+                  android:id="@+id/workType"
+                  android:layout_width="wrap_content"
+                  android:layout_height="48dp"
+                  android:layout_marginStart="16dp"
+                  android:layout_weight="1"
+                  android:src="@drawable/work" />
+              <androidx.appcompat.widget.AppCompatImageButton
+                  android:id="@+id/personalType"
+                  android:layout_width="wrap_content"
+                  android:layout_height="48dp"
+                  android:layout_marginStart="16dp"
+                  android:layout_weight="1"
+                  android:src="@drawable/personal"/>
+          </RadioGroup>
 
 
 
     </LinearLayout>
-
+    -->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,9 +14,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
+import com.mariano.taskapp.DB.TaskDataBaseDao;
+import com.mariano.taskapp.MainActivity;
 import com.mariano.taskapp.R;
 import com.mariano.taskapp.adapter.TodoAdapter;
+import com.mariano.taskapp.model.Task;
+
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -34,6 +40,8 @@ public class BlankFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    public String type;
+    public Button doneBtn;
 
     public BlankFragment() {
         // Required empty public constructor
@@ -76,11 +84,22 @@ public class BlankFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        doneBtn = view.findViewById(R.id.doneBtn);
         RecyclerView rv = (RecyclerView) view.findViewById(R.id.todo_list);
-        RecyclerView.Adapter adapter = new TodoAdapter(getActivity());
+        Bundle bundle = this.getArguments();
+        if (bundle != null) {
+            type = bundle.getString("type");
+        }
+        RecyclerView.Adapter adapter = new TodoAdapter(getActivity(), ((MainActivity) getActivity()).db, type);
         rv.setAdapter(adapter);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         rv.setLayoutManager(layoutManager);
 
+        doneBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getFragmentManager().popBackStack();
+            }
+        });
     }
 }

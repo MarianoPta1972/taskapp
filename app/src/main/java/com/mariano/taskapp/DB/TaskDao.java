@@ -4,6 +4,7 @@ import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
+import androidx.room.Update;
 
 import com.mariano.taskapp.model.Task;
 
@@ -25,7 +26,14 @@ public interface TaskDao {
     @Query("SELECT * FROM ` TaskTable` WHERE id = :taskId")
     Task getTodoById(int taskId);
 
+    @Query("SELECT * FROM ` TaskTable` WHERE status = :taskType" )
+    List<Task> getTaskByType(String taskType);
+
     @Delete
     void delete(Task task);
+
+    @Update
+    void update (Task task);
+
 
 }
